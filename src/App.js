@@ -1,10 +1,20 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Menubar from "./Component/Shared/Menubar/Menubar";
+import Home from "./Component/Home-pages/Home/Home";
 
 function App() {
   return (
     <div>
-      <Menubar></Menubar>
+      <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+           
+          </Switch>
+        </Router>
     </div>
   );
 }

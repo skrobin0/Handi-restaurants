@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Nav, Navbar} from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
@@ -18,6 +18,20 @@ const Menubar = () => {
             <Link to="/home" className="nav-link">
               Home
             </Link>
+            {users.email && (
+              <NavDropdown
+                title={users.displayName}
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item as={Link} to="/myOrder">My Order</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/manageOrder">
+                  Manage All Orders
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/additems">
+                  Add A Items
+                </NavDropdown.Item>
+              </NavDropdown>
+            )}
             {users.email ? (
               <Button className="btn btn-info" onClick={logOut}>
                 {" "}

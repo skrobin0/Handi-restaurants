@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AuthProvider from "./Component/Context/AuthProvider";
 import Home from "./Component/Home-pages/Home/Home";
+import Login from "./Component/Login/Login";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
             </Route>
           </Switch>
         </Router>

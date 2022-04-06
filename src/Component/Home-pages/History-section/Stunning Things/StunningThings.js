@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import "./StunningThings.css";
 
 const StunningThings = () => {
   return (
@@ -7,114 +8,83 @@ const StunningThings = () => {
       <Container>
         <Row className="text-center mt-5">
           <Col md={12} className="pt-5">
-            <h3>History of</h3>
-            <h1>Our Restaurant</h1>
-            ____ <i class="fa-solid fa-bahai pb-3"></i> ____
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis <br />
-              praesentium voluptatum deleniti atque corrupti quos dolores et
-              quas <br />
-              molestias excepturi sint occaecati cupiditate non provident.
-            </p>
+            <h3>For your comfort</h3>
+            <h1>Stunning Things</h1>
+            ____ <i class="fa-brands fa-accusoft"></i> ____
           </Col>
         </Row>
         <Row className="text-center mt-5">
           <Col md={4}>
-            <Card style={{ width: "21rem" }}>
+            <Card style={{ width: "23rem", height: "16rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
+                <i class="text-success fa-3x fa-solid fa-bowl-rice pt-4"></i>
+                <Card.Title className="py-3">High Quality Foods</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Etiam feugiat eleifend est, sed luctus odio tempor vitae.
+                  Vivamus maximus scelerisque ipsum nec commodto.
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card style={{ width: "21rem" }}>
+            <Card style={{ width: "23rem", height: "16rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
+                <i class="text-success fa-3x fa-solid fa-martini-glass-citrus pt-4"></i>
+                <Card.Title className="py-3">Inspiring Recipes</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Etiam feugiat eleifend est, sed luctus odio tempor vitae.
+                  Vivamus maximus scelerisque ipsum nec commodto.
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card style={{ width: "21rem" }}>
+            <Card style={{ width: "23rem", height: "16rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
+                <i class="text-success fa-3x fa-solid fa-fish-fins pt-4"></i>
+                <Card.Title className="py-3">Salutary Meals</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Etiam feugiat eleifend est, sed luctus odio tempor vitae.
+                  Vivamus maximus scelerisque ipsum nec commodto.
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
         </Row>
         <Row className="text-center mt-5">
           <Col md={4}>
-            <Card style={{ width: "21rem" }}>
+            <Card style={{ width: "23rem", height: "16rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
+                <i class="text-success fa-3x fa-solid fa-staff-aesculapius pt-4"></i>
+                <Card.Title className="py-3">Veteran Staff</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Etiam feugiat eleifend est, sed luctus odio tempor vitae.
+                  Vivamus maximus scelerisque ipsum nec commodto.
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card style={{ width: "21rem" }}>
+            <Card style={{ width: "23rem", height: "16rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
+                <i class="text-success fa-3x fa-brands fa-the-red-yeti pt-4"></i>
+                <Card.Title className="py-3">Pristine Ingredients</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Etiam feugiat eleifend est, sed luctus odio tempor vitae.
+                  Vivamus maximus scelerisque ipsum nec commodto.
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card style={{ width: "21rem" }}>
+            <Card style={{ width: "23rem", height: "16rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
+                <i class="text-success fa-3x fa-solid fa-truck-ramp-box pt-4"></i>
+                <Card.Title className="py-3">Express Delivery</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Etiam feugiat eleifend est, sed luctus odio tempor vitae.
+                  Vivamus maximus scelerisque ipsum nec commodto.
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>

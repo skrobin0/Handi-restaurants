@@ -1,0 +1,18 @@
+.tt:hover{
+    transform: translateY(15px);
+}
+
+.tt:hover:before{
+    opacity: 1;
+}
+
+.tt{
+    transition: 0.8s;
+
+}
+
+
+
+
+
+

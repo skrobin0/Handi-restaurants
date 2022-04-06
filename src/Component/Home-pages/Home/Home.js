@@ -7,6 +7,7 @@ import History from '../History-section/History/History';
 import ParticularSection from '../History-section/Particular Section/ParticularSection';
 import SeasonalMenus from '../History-section/Seasonal Menus/SeasonalMenus';
 import StunningThings from '../History-section/Stunning Things/StunningThings';
+import TeamMember from '../History-section/TeamMember/TeamMember';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <StunningThings></StunningThings>
             <ParticularSection></ParticularSection>
             <SeasonalMenus></SeasonalMenus>
+            <TeamMember></TeamMember>
             <Footer></Footer>
         </div>
     );

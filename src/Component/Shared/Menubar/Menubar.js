@@ -18,6 +18,12 @@ const Menubar = () => {
             <Link to="/home" className="nav-link">
               Home
             </Link>
+            <Link to="/shop" className="nav-link">
+              Shop
+            </Link>
+            <Link to="/dashboard" className="nav-link">
+              Dashboard
+            </Link>
             {users.email && (
               <NavDropdown
                 title={users.displayName}

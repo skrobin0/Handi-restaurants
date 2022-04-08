@@ -16,7 +16,7 @@ const Banner = () => {
           />
           <Carousel.Caption>
           <div className="cap">
-            <h1>Taste the difference</h1>
+            <h1 style={{fontFamily:'cursive'}}>Taste the difference</h1>
             <p>
              Fine & Delicious Food
             </p>
@@ -32,7 +32,7 @@ const Banner = () => {
 
           <Carousel.Caption>
           <div className="cap">
-            <h1>Experience the grand setting</h1>
+            <h1 style={{fontFamily:'cursive'}}>Experience the grand setting</h1>
             <p>
               The Celebrated Cuisine Of
             </p>
@@ -48,7 +48,7 @@ const Banner = () => {
 
           <Carousel.Caption>
             <div className="cap">
-            <h1>Celebrate</h1>
+            <h1 style={{fontFamily:'cursive'}}>Celebrate</h1>
             <p>
               Local & Seasonal Food
             </p>

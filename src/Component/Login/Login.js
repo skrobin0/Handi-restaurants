@@ -45,7 +45,7 @@ const Login = () => {
           <Col md={6} className="text-center">
               
             <Col md={6} xs={12} sm={3}>
-              <h3 className="text-success">
+              <h3 className="text-success" style={{fontFamily:'cursive'}}>
                 Please {isLogin ? "Login" : "Register"}{" "}
               </h3>
               <h3 className="text-danger"> {error} </h3>

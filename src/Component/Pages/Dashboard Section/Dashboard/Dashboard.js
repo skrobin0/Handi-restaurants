@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import AddFoods from "../Add Foods Item/AddFoods";
 import ManageAllOrder from "../Manage All Order/ManageAllOrder";
 import MyOrder from "../My Order/MyOrder";
 
@@ -37,9 +38,14 @@ const Dashboard = () => {
                 <i className="far fa-comment-alt"></i> All Order
               </Button>
             </Link>
+            <Link to={`${url}/addFood`}>
+              <Button className="fs-6 none text-white my-1 me-1">
+                <i className="far fa-comment-alt"></i> Add Food
+              </Button>
+            </Link>
           </>
           )
-          <Button onClick={logOut} className="fs-6 none text-white">
+          <Button onClick={logOut} className="fs-6 none text-white mt-1">
             <i className="fas fa-sign-out-alt"></i> Log Out
           </Button>
         </Col>
@@ -63,6 +69,10 @@ const Dashboard = () => {
 
             <Route path={`${path}/manageOrder`}>
               <ManageAllOrder></ManageAllOrder>
+            </Route>
+
+            <Route path={`${path}/addFood`}>
+              <AddFoods></AddFoods>
             </Route>
 
             <Route path={`${path}/addProducts`}></Route>

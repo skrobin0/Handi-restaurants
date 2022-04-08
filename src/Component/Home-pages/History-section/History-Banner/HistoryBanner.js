@@ -13,9 +13,10 @@ const HistoryBanner = () => {
 
           <Col md={8}>
             <img style={{ width: "100%", height:'450px' }} src={slice2} alt="" />
-            <div className='text-white' style={{marginTop:'-240px'}}>
-            <h1  >Over 250 Delicious & Tasty</h1>
-            <h1>Recipes</h1>
+            <div className='text-white' style={{marginTop:'-280px'}}>
+            <h1 style={{fontFamily:"cursive",}}>Over 250 Delicious & Tasty
+            <br />
+            Recipes</h1>
             </div>
             
           </Col>

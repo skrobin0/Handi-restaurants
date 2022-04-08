@@ -11,7 +11,7 @@ const ParticularSection = () => {
             <Row className="mt-5">
               <Col md={8} className='my-2'>
                 <i class="text-success fa-2x fa-solid fa-bread-slice mb-2"></i>
-                <h5>Salubrious Snacks</h5>
+                <h5 className="mm">Salubrious Snacks</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incid iduntus ut

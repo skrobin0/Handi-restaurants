@@ -10,8 +10,8 @@ const History = () => {
       <Container>
         <Row className="text-center mt-5">
           <Col md={6} className="pt-5">
-            <h3>History of</h3>
-            <h1>Our Restaurant</h1>
+            <h3 style={{fontFamily:'cursive'}}>History of</h3>
+            <h1 style={{fontFamily:'cursive'}}>Our Restaurant</h1>
             ____ <i class="fa-solid fa-bahai pb-3"></i> ____
             <p>
               At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -31,8 +31,8 @@ const History = () => {
             <img style={{ width: "75%" }} src={cover2} alt="" />
           </Col>
           <Col md={6} className="pt-5">
-            <h3>Delicated</h3>
-            <h1>Our Services</h1>
+            <h3 style={{fontFamily:'cursive'}}>Delicated</h3>
+            <h1 style={{fontFamily:'cursive'}}>Our Services</h1>
             ____ <i class="fa-solid fa-bahai pb-3"></i> ____
             <p>
               At vero eos et accusamus et iusto odio dignissimos ducimus qui

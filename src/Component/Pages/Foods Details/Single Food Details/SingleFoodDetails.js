@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import useAuth from "../../../Hooks/useAuth";
+import Menubar from "../../../Shared/Menubar/Menubar";
 
 const SingleFoodDetails = () => {
   const { id } = useParams();
+  const { reset } = useForm();
+  const { users } = useAuth();
 
   const [singleFood, setSingleFood] = useState([]);
-  
 
-  const url = `http://localhost:5000/foods`;
+  const url = `https://hidden-escarpment-63235.herokuapp.com/foods`;
 
   useEffect(() => {
     fetch(url)
@@ -18,58 +22,123 @@ const SingleFoodDetails = () => {
 
   const Food = singleFood.find((dt) => dt?.id == id);
 
-  const [num, setNum] = useState(1);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  let incNum = () => {
-    setNum(Number(num) + 1);
-  };
-  let decNum = () => {
-    if (num > 1) {
-      setNum(num - 1);
-    }
-  };
-  let handleChange = (e) => {
-    setNum(e.target.value);
-  };
+  const onSubmit = (data) => {
+    fetch("https://hidden-escarpment-63235.herokuapp.com/orders", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+    alert("Your Order Receored");
+    reset();
 
- 
+    console.log(data);
+  };
 
   return (
-    <div>
-         <Row className="mx-auto text-center">
-        <Col md={6}>
-          <div className="cart p-3 m-2 border border">
-            <div className="service img">
-              <img style={{ width: "60%" }} src={Food?.image} alt="category" />
+    <>
+      <Menubar></Menubar>
+      <Container className="mt-5">
+        <Row className="mx-auto text-center">
+          <Col md={6}>
+            <div className="cart p-3 m-2 border border">
+              <div className="service img">
+                <img
+                  style={{ width: "60%" }}
+                  src={Food?.image}
+                  alt="category"
+                />
+              </div>
+              <h4 className="mt-4 text-success">{Food?.title}</h4>
+              <p className="mt-2">{Food?.description}</p>
+              <h6 className="mt-2">Price :{Food?.price}</h6>
             </div>
-            <h6 className="mt-4 text-info">Teacher :{Food?.title}</h6>
-            <p className="mt-2">{Food?.description}</p>
-            <p className="mt-2">{Food?.price *num}</p>
-          </div>
-          <Button
-            
-            onClick={decNum}
-          >
-            -
-          </Button>
-          <input
-            type="text"
-            class="form-control text-center"
-            value={num}
-            onChange={handleChange}
-          />
-          <Button
-            
-            onClick={incNum}
-          >
-            +
-          </Button>
-          
-            
-        </Col>
-      </Row>
-    </div>
-    
+          </Col>
+
+          <Col md={6}>
+            <div className=" order-form mt-2">
+              <div>
+                <div className="event-box border border d-flex justify-content-center align-items-center">
+                  <div className="login-form">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                      {Food?.title && (
+                        <input
+                          defaultValue={Food?.title}
+                          {...register("ItemName")}
+                          placeholder="Name"
+                          className="p-2 m-2"
+                          style={{ width: "300px" }}
+                        />
+                      )}
+                      <br />
+
+                      {users.displayName && (
+                        <input
+                          defaultValue={users?.displayName}
+                          {...register("name")}
+                          placeholder="Name"
+                          className="p-2 m-2"
+                          style={{ width: "300px" }}
+                        />
+                      )}
+                      <br />
+
+                      <input
+                        value={users.email}
+                        {...register("email", { required: true })}
+                        placeholder="Email"
+                        className="p-2 m-2"
+                        style={{ width: "300px" }}
+                      />
+                      <br />
+                      <input
+                        {...register("date", { required: true })}
+                        placeholder="date"
+                        defaultValue={new Date()}
+                        className="p-2 m-2"
+                        style={{ width: "300px" }}
+                      />
+                      <br />
+                      <input
+                        value={Food?.price}
+                        {...register("price", { required: true })}
+                        placeholder="Price"
+                        className="p-2 m-2"
+                        style={{ width: "300px" }}
+                      />
+                      <br />
+                      <input
+                        {...register("location", { required: true })}
+                        placeholder="Location"
+                        className="p-2 m-2"
+                        style={{ width: "300px" }}
+                      />
+                      <br />
+                      {errors.exampleRequired && (
+                        <span>This field is required</span>
+                      )}
+
+                      <input
+                        type="submit"
+                        className="btn btn-success w-50 my-2 "
+                        value="Book Now"
+                      />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

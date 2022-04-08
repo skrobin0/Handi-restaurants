@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import Food from "../Food/Food";
+import Menubar from '../../../Shared/Menubar/Menubar'
 
 const Foods = () => {
   const [foods, setFoods] = useState([]);
 
-  const url = `http://localhost:5000/foods`;
+  const url = `https://hidden-escarpment-63235.herokuapp.com/foods`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -23,10 +24,12 @@ const Foods = () => {
   }
 
   return (
+    <>
+    <Menubar></Menubar>
     <Container fluid className="p-5">
       <Row>
         <Col className="text-center">
-          <h1>
+          <h1 style={{fontFamily:'cursive'}}>
             <i className="fa-solid fa-utensils pe-2"></i>
             Order Your Favourite Dish
             <i className=" fa-solid fa-utensils ps-2"></i>
@@ -42,6 +45,7 @@ const Foods = () => {
         ))}
       </Row>
     </Container>
+    </>
   );
 };
 

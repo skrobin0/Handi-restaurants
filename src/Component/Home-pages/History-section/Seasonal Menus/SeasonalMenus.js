@@ -11,8 +11,8 @@ const SeasonalMenus = () => {
           md={4}
           style={{ backgroundColor: "rgb(244,241,234)", paddingTop: "120px" }}
         >
-          <h4>Embracing </h4>
-          <h2>Seasonal Menus</h2>
+          <h4 style={{fontFamily:'cursive'}}>Embracing </h4>
+          <h2 style={{fontFamily:'cursive'}}>Seasonal Menus</h2>
           ___________
 
           <p className="pt-3">

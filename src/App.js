@@ -5,7 +5,7 @@ import Login from "./Component/Login/Login";
 import Dashboard from "./Component/Pages/Dashboard Section/Dashboard/Dashboard";
 import Foods from "./Component/Pages/Foods Details/Foods/Foods";
 import SingleFoodDetails from "./Component/Pages/Foods Details/Single Food Details/SingleFoodDetails";
-
+import PrivateRoute from "./Component/Private/PrivateRoute"
 
 function App() {
   return (
@@ -22,12 +22,12 @@ function App() {
             <Route path="/shop">
              <Foods></Foods>
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
              <Dashboard></Dashboard>
-            </Route>
-            <Route path="/singleFood/:id">
+            </PrivateRoute>
+            <PrivateRoute path="/singleFood/:id">
              <SingleFoodDetails></SingleFoodDetails>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

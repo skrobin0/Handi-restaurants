@@ -8,8 +8,8 @@ const StunningThings = () => {
       <Container>
         <Row className="text-center mt-5">
           <Col md={12} className="pt-5">
-            <h3>For your comfort</h3>
-            <h1>Stunning Things</h1>
+            <h3 style={{fontFamily:'cursive'}}>For your comfort</h3>
+            <h1 style={{fontFamily:'cursive'}}>Stunning Things</h1>
             ____ <i class="fa-brands fa-accusoft"></i> ____
           </Col>
         </Row>
